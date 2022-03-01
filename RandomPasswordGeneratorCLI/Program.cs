@@ -7,7 +7,7 @@ namespace Pac
         public static void Main(string[] args)
         {
             var rand = new Random();
-            string str;
+            //string str;
             Console.Write("How many phrases would you like to add... ");
             int repeat = Convert.ToInt32(Console.ReadLine());
 
