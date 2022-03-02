@@ -10,6 +10,12 @@ namespace Pac
             //string str;
             Console.Write("How many phrases would you like to add... ");
             int repeat = Convert.ToInt32(Console.ReadLine());
+            Console.Write("How many characters do you need... ");
+            int characters = Convert.ToInt32(Console.ReadLine());
+            /*Console.Write("How many phrases would you like to add... ");
+            int repeat = Convert.ToInt32(Console.ReadLine());
+            Console.Write("How many phrases would you like to add... ");
+            int repeat = Convert.ToInt32(Console.ReadLine());*/
 
             string[] phrases = new string[repeat];
 
@@ -34,8 +40,13 @@ namespace Pac
             } while (str != "");*/
 
             //Console.WriteLine(randomNumber(rand, 5, 15));
+            string password = "";
 
-            string password = phrases[randomNumber(rand, 0, phrases.Length)];
+            while (password.Length < characters)
+            {
+                password += phrases[randomNumber(rand, 0, phrases.Length)];
+            }
+
 
             Console.WriteLine($"Your password is {password}");
 
